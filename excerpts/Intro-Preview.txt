@@ -1,0 +1,38 @@
+import re
+
+def test_lyrics_format():
+    with open("ya-habibi-private/lyric-raw.txt", "r") as f:
+        content = f.read()
+
+    sections = [
+        r"\[Hook \(Arabic\)\]",
+        r"\[Hook \(Hindi\)\]",
+        r"\[Hook \(English\)\]",
+        r"\[Verse 1 \(Bangla\)\]",
+        r"\[Pre-Chorus 1 \(Hindi\)\]",
+        r"\[Chorus \(Bangla\)\]",
+        r"\[Verse 2 \(Arabic\)\]",
+        r"\[Pre-Chorus 2 \(Punjabi\)\]",
+        r"\[Chorus \(Arabic\)\]",
+        r"\[Verse 3 \(Hindi\)\]",
+        r"\[Pre-Chorus 3 \(Arabic\)\]",
+        r"\[Chorus \(Bangla\)\]",
+        r"\[Verse 4 \(Punjabi\)\]",
+        r"\[Bridge \(English\)\]",
+        r"\[Chorus \(Hindi\)\]",
+        r"\[Outro \(Arabic\)\]"
+    ]
+
+    for section in sections:
+        if not re.search(section, content):
+            print(f"FAILED: Missing section {section}")
+            return False
+
+    if "Sayed" not in content:
+        print("FAILED: Missing Sayed in bridge")
+        return False
+
+    print("All format tests passed!")
+    return True
+
+test_lyrics_format()

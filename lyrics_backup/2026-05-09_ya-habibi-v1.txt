@@ -1,0 +1,258 @@
+Title: Ya Habibi
+Clean Hash: 8404f5535177c16950a0b23c16d603ac95061edeea17116c580614a5f1a213c3
+Raw Hash: 40bef5097f8f14a99e48ac999dbf98b0878bee74d3036ff4d693a2f7406e8ebf
+Date: 2026-05-09T12:54:48.407825
+Version: 1
+----------------------------------------
+[RAW LYRICS]
+import re
+
+def test_lyrics_format():
+    with open("ya-habibi-private/lyric-raw.txt", "r") as f:
+        content = f.read()
+
+    sections = [
+        r"\[Hook \(Arabic\)\]",
+        r"\[Hook \(Hindi\)\]",
+        r"\[Hook \(English\)\]",
+        r"\[Verse 1 \(Bangla\)\]",
+        r"\[Pre-Chorus 1 \(Hindi\)\]",
+        r"\[Chorus \(Bangla\)\]",
+        r"\[Verse 2 \(Arabic\)\]",
+        r"\[Pre-Chorus 2 \(Punjabi\)\]",
+        r"\[Chorus \(Arabic\)\]",
+        r"\[Verse 3 \(Hindi\)\]",
+        r"\[Pre-Chorus 3 \(Arabic\)\]",
+        r"\[Chorus \(Bangla\)\]",
+        r"\[Verse 4 \(Punjabi\)\]",
+        r"\[Bridge \(English\)\]",
+        r"\[Chorus \(Hindi\)\]",
+        r"\[Outro \(Arabic\)\]"
+    ]
+    
+    for section in sections:
+        if not re.search(section, content):
+            print(f"FAILED: Missing section {section}")
+            return False
+            
+    if "Sayed" not in content:
+        print("FAILED: Missing Sayed in bridge")
+        return False
+        
+    print("All format tests passed!")
+    return True
+
+test_lyrics_format()
+[Hook (Arabic)]
+[Male]
+يا حبيبي نورك يسري في دمي
+أنت حلمي أنت نبضي السري
+تعالي بقربي ننسى كل الآلام
+بين يدي نعيش أحلى غرام
+
+[Hook (Hindi)]
+[Female]
+तू जो मिला तो मिल गया ये जहाँ
+तेरे बिना मेरा कोई है कहाँ
+धड़कनों में बस तेरी ही है सदा
+मेरी साँसों पे है तेरा ही नशा
+
+[Hook (English)]
+[Male]
+Feel the rhythm pulling our bodies near
+Close your eyes and let the whole world disappear
+Dancing in the dark with your skin on mine
+We can leave the heavy echoes all behind
+
+[Verse 1 (Bangla)]
+[Male]
+রাতের আঁধারে তুমি আমার আলো
+তোমায় বাসতে চাই আমি আরো ভালো
+তোমার ছোঁয়ায় আমার শরীর শিহরায়
+আমার এ মন শুধু তোমাকেই চায়
+
+[Pre-Chorus 1 (Hindi)]
+[Female]
+पास आ के छू ले मुझे तू ज़रा
+ये तड़प अब तो सही ना जाए यारा
+तेरे होठों की मुझे प्यास है जगी
+तू ही तो है मेरे जीने की वजह
+
+[Chorus (Bangla)]
+[Male]
+ও আমার জান তুমি বুকের ভেতর
+তোমায় নিয়ে বাঁধবো প্রেমের এই ঘর
+মিশে যাও তুমি আমার প্রতিটি নিঃশ্বাসে
+আমি থাকবো চিরদিন তোমারই পাশে
+
+[Verse 2 (Arabic)]
+[Male]
+شوقي إليك كنار تحرق الجسد
+أنت الوحيدة لي إلى الأبد
+أريد أن أذوب في عينيك السوداء
+أنت في حياتي كالهواء والماء
+
+[Pre-Chorus 2 (Punjabi)]
+[Female]
+ਤੇਰੇ ਬਿਨਾਂ ਮੇਰਾ ਲੱਗਦਾ ਨਾ ਜੀ
+ਤੂੰ ਹੀ ਮੇਰਾ ਸਭ ਕੁਝ, ਦੱਸਾਂ ਤੈਨੂੰ ਕੀ
+ਤੇਰੀਆਂ ਬਾਹਾਂ ਵਿੱਚ ਮਿਲਦਾ ਸਕੂਨ
+ਤੇਰਾ ਇਸ਼ਕ ਮੇਰੇ ਸਿਰ ਤੇ ਚੜ੍ਹਿਆ ਜਨੂੰਨ
+
+[Chorus (Arabic)]
+[Male]
+يا حبيبي لا تغيبي عن عيني
+أنت روحي وأنت كل ما لدي
+أحبك أكثر من كل الكلمات
+أنت عشقي في كل اللحظات
+
+[Verse 3 (Hindi)]
+[Female]
+तेरे सीने पे सर रख के सोना है
+मुझे बस अब तेरा ही होना है
+तेरी बाहों में अब मुझे खोने दे
+हमें एक दूजे का अब होने दे
+
+[Pre-Chorus 3 (Arabic)]
+[Male]
+تعالي إلي واطوي هذه المسافات
+بين ذراعيك تتوقف كل الساعات
+نار الشوق تدعونا إلى الجنون
+أنا عاشق ومفتون بتلك العيون
+
+[Chorus (Bangla)]
+[Female]
+তুমি আমার প্রথম ও শেষ ভালোবাসা
+তোমায় ঘিরেই আমার সব জীবনের আশা
+তোমার বুকে মাথা রেখে কাটাবো প্রহর
+তুমি আমার আঁধার রাতের মিষ্টি শহর
+
+[Verse 4 (Punjabi)]
+[Male]
+ਕੋਲ ਆਜਾ ਮੇਰੇ, ਦੂਰੀ ਹੁਣ ਸਹੀ ਨਾ ਜਾਵੇ
+ਤੇਰਾ ਨਸ਼ਾ ਮੇਰੀ ਰਗ-ਰਗ ਵਿੱਚ ਸਮਾਵੇ
+ਤੇਰੇ ਬੁੱਲ੍ਹਾਂ ਦੀ ਪਿਆਸ ਮੈਨੂੰ ਤੜਪਾਉਂਦੀ
+ਤੇਰੀ ਖੁਸ਼ਬੂ ਮੈਨੂੰ ਆਪਣੇ ਵੱਲ ਖਿੱਚ ਲਿਆਉਂਦੀ
+
+[Bridge (English)]
+[Male]
+Step into the fire, let the shadows disappear
+I can feel your heartbeat echoing so loud and clear
+Hold on to the feeling... Sayed in you... (Sayed... Sayed...)
+Let the silence take us where our destiny is true
+Surrender to the rhythm moving deep within the light
+We'll burn across the heavens and own the heavy night
+
+[Chorus (Hindi)]
+[Female]
+तू मेरा है अब तो ये इकरार कर
+मेरे होठों से अपने होठों को छू कर
+इन अंधेरों में अब खो जाने दे
+सांसों में तेरी अब बस जाने दे
+
+[Outro (Arabic)]
+[Male]
+يا حبيبي ابقي هنا في أحضاني
+معك أنسى كل أحزاني وزماني
+دعيني أتنفس عطرك حتى الصباح
+في عشقك أجد كل الارتياح
+--------------------
+[CLEAN LYRICS]
+import re
+def test_lyrics_format():
+with open("ya-habibi-private/lyric-raw.txt", "r") as f:
+content = f.read()
+sections = [
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\",
+r"\"
+]
+for section in sections:
+if not re.search(section, content):
+print.. f"FAILED: Missing section {section}"..
+return False
+if "Sayed" not in content:
+print.. "FAILED: Missing Sayed in bridge"..
+return False
+print.. "All format tests passed!"..
+return True
+test_lyrics_format()
+يا حبيبي نورك يسري في دمي
+أنت حلمي أنت نبضي السري
+تعالي بقربي ننسى كل الآلام
+بين يدي نعيش أحلى غرام
+तू जो मिला तो मिल गया ये जहाँ
+तेरे बिना मेरा कोई है कहाँ
+धड़कनों में बस तेरी ही है सदा
+मेरी साँसों पे है तेरा ही नशा
+Feel the rhythm pulling our bodies near
+Close your eyes and let the whole world disappear
+Dancing in the dark with your skin on mine
+We can leave the heavy echoes all behind
+রাতের আঁধারে তুমি আমার আলো
+তোমায় বাসতে চাই আমি আরো ভালো
+তোমার ছোঁয়ায় আমার শরীর শিহরায়
+আমার এ মন শুধু তোমাকেই চায়
+पास आ के छू ले मुझे तू ज़रा
+ये तड़प अब तो सही ना जाए यारा
+तेरे होठों की मुझे प्यास है जगी
+तू ही तो है मेरे जीने की वजह
+ও আমার জান তুমি বুকের ভেতর
+তোমায় নিয়ে বাঁধবো প্রেমের এই ঘর
+মিশে যাও তুমি আমার প্রতিটি নিঃশ্বাসে
+আমি থাকবো চিরদিন তোমারই পাশে
+شوقي إليك كنار تحرق الجسد
+أنت الوحيدة لي إلى الأبد
+أريد أن أذوب في عينيك السوداء
+أنت في حياتي كالهواء والماء
+ਤੇਰੇ ਬਿਨਾਂ ਮੇਰਾ ਲੱਗਦਾ ਨਾ ਜੀ
+ਤੂੰ ਹੀ ਮੇਰਾ ਸਭ ਕੁਝ, ਦੱਸਾਂ ਤੈਨੂੰ ਕੀ
+ਤੇਰੀਆਂ ਬਾਹਾਂ ਵਿੱਚ ਮਿਲਦਾ ਸਕੂਨ
+ਤੇਰਾ ਇਸ਼ਕ ਮੇਰੇ ਸਿਰ ਤੇ ਚੜ੍ਹਿਆ ਜਨੂੰਨ
+يا حبيبي لا تغيبي عن عيني
+أنت روحي وأنت كل ما لدي
+أحبك أكثر من كل الكلمات
+أنت عشقي في كل اللحظات
+तेरे सीने पे सर रख के सोना है
+मुझे बस अब तेरा ही होना है
+तेरी बाहों में अब मुझे खोने दे
+हमें एक दूजे का अब होने दे
+تعالي إلي واطوي هذه المسافات
+بين ذراعيك تتوقف كل الساعات
+نار الشوق تدعونا إلى الجنون
+أنا عاشق ومفتون بتلك العيون
+তুমি আমার প্রথম ও শেষ ভালোবাসা
+তোমায় ঘিরেই আমার সব জীবনের আশা
+তোমার বুকে মাথা রেখে কাটাবো প্রহর
+তুমি আমার আঁধার রাতের মিষ্টি শহর
+ਕੋਲ ਆਜਾ ਮੇਰੇ, ਦੂਰੀ ਹੁਣ ਸਹੀ ਨਾ ਜਾਵੇ
+ਤੇਰਾ ਨਸ਼ਾ ਮੇਰੀ ਰਗ-ਰਗ ਵਿੱਚ ਸਮਾਵੇ
+ਤੇਰੇ ਬੁੱਲ੍ਹਾਂ ਦੀ ਪਿਆਸ ਮੈਨੂੰ ਤੜਪਾਉਂਦੀ
+ਤੇਰੀ ਖੁਸ਼ਬੂ ਮੈਨੂੰ ਆਪਣੇ ਵੱਲ ਖਿੱਚ ਲਿਆਉਂਦੀ
+Step into the fire, let the shadows disappear
+I can feel your heartbeat echoing so loud and clear
+Hold on to the feeling... Sayed in you..... Sayed... Sayed.....
+Let the silence take us where our destiny is true
+Surrender to the rhythm moving deep within the light
+We'll burn across the heavens and own the heavy night
+तू मेरा है अब तो ये इकरार कर
+मेरे होठों से अपने होठों को छू कर
+इन अंधेरों में अब खो जाने दे
+सांसों में तेरी अब बस जाने दे
+يا حبيبي ابقي هنا في أحضاني
+معك أنسى كل أحزاني وزماني
+دعيني أتنفس عطرك حتى الصباح
+في عشقك أجد كل الارتياح
